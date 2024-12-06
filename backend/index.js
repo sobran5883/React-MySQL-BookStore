@@ -18,7 +18,7 @@ const db = mysql.createConnection({
 
 app.use(express.json({ limit: "500kb" })); // Set JSON payload limit to 500 KB
 app.use(cors({
-    origin: 'https://react-my-sql-book-store.vercel.app',
+    // origin: 'https://react-my-sql-book-store.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
