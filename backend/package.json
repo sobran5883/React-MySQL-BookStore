@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "kill-port 3000 && nodemon index.js",
+    "start": "nodemon index.js",
     "build": "npm install"
 }  ,
   "author": "sobran",
