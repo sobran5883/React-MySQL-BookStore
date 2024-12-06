@@ -39,7 +39,7 @@ function Add() {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8800/books", book);
+      await axios.post("https://react-mysql-bookstore.onrender.com/books", book);
       navigate("/", { replace: true });
     } catch (err) {
       console.log(err);

@@ -8,7 +8,7 @@ function Books() {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/books");
+        const res = await axios.get("https://react-mysql-bookstore.onrender.com/books");
         setBooks(res.data);
       } catch (err) {
         console.log(err);
@@ -19,7 +19,7 @@ function Books() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete("http://localhost:8800/books/" + id);
+      await axios.delete("https://react-mysql-bookstore.onrender.com/books/" + id);
       setBooks((prev) => prev.filter((book) => book.id !== id));
     } catch (err) {
       console.log(err);

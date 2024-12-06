@@ -18,7 +18,7 @@ function Update() {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/books/${bookId}`);
+        const res = await axios.get(`https://react-mysql-bookstore.onrender.com/books/${bookId}`);
         setBook(res.data);
       } catch (err) {
         console.error("Failed to fetch book details:", err);
@@ -54,7 +54,7 @@ function Update() {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8800/book/${bookId}`, book);
+      await axios.put(`https://react-mysql-bookstore.onrender.com/book/${bookId}`, book);
       navigate("/");
     } catch (err) {
       console.error(err);
